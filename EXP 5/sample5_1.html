@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortest and Longest Word</title>
+</head>
+<body>
+<h2>Shortest and Longest Word</h2>
+<script>
+let str = "Web Development Tutorial";
+let words = str.split(" ");
+let shortest = words[0];
+let longest = words[0];
+for (let i = 1; i < words.length; i++) {
+    if (words[i].length < shortest.length) {
+        shortest = words[i];
+  }
+    if (words[i].length > longest.length) {
+        longest = words[i];  }}
+document.write("String: " + str + "<br><br>");
+document.write("Shortest: " + shortest + "<br>");
+document.write("Longest: " + longest);
+</script>
+</body>
+</html>
