@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Array of Objects</title>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <div id="output"></div>
+    <script>
+        let students = [
+            {
+            name: "Mercymano Suresh",
+            regNo: "URK20CS1234",
+            dob: "19-Nov-1978"
+            },{
+            name: "Shalini",
+            regNo: "URK25CS1157",
+            dob: "24-Nov-2008"
+            },{
+            name: "Angel Priscilla",
+            regNo: "URK24CS1143",
+            dob: "22-May-2007"
+            },{
+            name: "Suresh John",
+            regNo: "URK20CS1432",
+            dob: "16-May-1975"
+            }
+        ];
+        let output = "";
+        for (let i = 0; i < students.length; i++) {
+            let year = parseInt(
+                students[i].dob.split("-")[2]
+            );
+            output += "<h3>" + students[i].name + "</h3>";
+            output += "Register Number: " +
+                students[i].regNo + "<br>";
+            output += "Date of Birth: " +
+                students[i].dob + "<br>";
+            if (year < 2000) {
+                output += "Category: Born before 2000";
+            }else {
+                output += "Category: Born after 2000";
+            }
+            output += "<hr>";
+        }
+        document.getElementById("output").innerHTML =
+            output;
+    </script>
+</body>
+</html>
